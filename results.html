@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cigarro</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  
+  <video autoplay muted loop id="myVideo">
+    <source src="./img/video.mp4" type="video/mp4">
+    Hubo un problema con el video
+  </video>
+  <h1 class="header center red-text">
+    Resultados
+  </h1>
+  <div class="container">
+    <div class="row">
+      <div class="col s5 z-depth-5 white">
+        <div class="row">
+          <div class="col s12">
+            <p class="center"><i class="large material-icons">attach_money</i></p> 
+            <h5 class="header center red-text">
+              Mira cuento dinero has perdido
+            </h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s4">
+            <img src="./img/poca plata.svg" alt="">
+            <p id="menos-dinero-nombre"></p>
+            <p id="menos-dinero-monto"></p>
+          </div>
+          <div class="col s4">
+            <img src="./img/mucha plata.svg" alt="">
+            <p id="mas-dinero-nombre"></p>
+            <p id="mas-dinero-monto"></p>
+          </div>
+          <div class="col s4">
+            <img src="./img/media plata.svg" alt="">
+            <p>promedio</p>
+            <p id="monto-promedio"></p>
+          </div>
+        </div>
+      </div>
+      <div class="col s1"></div>
+      <div class="col s5 z-depth-5 white">
+        <div class="row">
+          <div class="col s12">
+            <p class="center"><i class="large material-icons">format_color_reset</i></p> 
+            <h5 class="header center red-text">
+              Agua
+            </h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s4">
+            <img src="./img/poco contaminado1.svg" alt="">
+            <p id="menos-agua-nombre"></p>
+            <p id="menos-agua-lts"></p>
+          </div>
+          <div class="col s4">
+            <img src="./img/muy contaminado1.svg" alt="">
+            <p id="mas-agua-nombre"></p>
+            <p id="mas-agua-lts"></p>
+          </div>
+          <div class="col s4">
+            <img src="./img/medio contaminado1.svg" alt="">
+            <p>Promedio</p>
+            <p id="promedio-lts"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s5 z-depth-5 white">
+        <div class="row">
+          <div class="col s12">
+            <p class="center"><i class="large material-icons">favorite_border</i></p> 
+            <h5 class="header center red-text">
+              Daño Al corazon
+            </h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s4">
+            <img src="./img/corazon mal.svg" alt="">
+          </div>
+          <div class="col s4">
+            <img src="./img/corazon no tan mal.svg" alt="">
+          </div>
+          <div class="col s4">
+            <img src="./img/corazon no mal.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col s1"></div>
+      <div class="col s5 z-depth-5 white">
+        <div class="row">
+          <div class="col s12">
+            <p class="center"><i class="large material-icons">today</i></p> 
+            <h5 class="header center red-text">
+              Días menos
+            </h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s4">
+            <img src="./img/poco tiempo1.svg" alt="">
+            <p id="menos-dias-nombre"></p>
+            <p id="menos-dias-cantidad"></p>
+          </div>
+          <div class="col s4">
+            <img src="./img/harto tiempo.svg" alt="">
+            <p id="mas-dias-nombre"></p>
+            <p id="mas-dias-cantidad"></p>
+          </div>
+          <div class="col s4">
+            <img src="./img/medio tiempo.svg" alt="">
+            <p>Promedio</p>
+            <p id="promedio-dias"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="./js/script.js"></script>
+  
+</body>
+</html>
+
+
+<!-- bibliografia usada 
+  extraer datos del formulario
+  http://jquery-howto.blogspot.com/2009/09/get-url-parameters-values-with-jquery.html
+  video de fondo
+  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fullscreen_video
+-->

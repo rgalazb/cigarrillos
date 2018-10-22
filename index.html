@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cigarro</title>
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <video autoplay muted loop id="myVideo">
+    <source src="./img/video.mp4" type="video/mp4">
+    Hubo un problema con el video
+  </video>
+  <div class="container">
+    <h1 class="header center red-text">Te has dado cuenta del daño de produce el cigarro</h1>
+    <h4 class="header center red-text">bajada de titulo</h4>
+    <div class="row z-depth-5 white">
+      <img src="./img/malboro.jpg" class="responsive-img" alt="">
+      <form class="col s12 " method="GET" action="./results.html">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="name1" type="text" class="validate" name="name1" required>
+            <label for="name1">Nombre</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="name2" type="text" class="validate" name="name2" required>
+            <label for="name2">Nombre</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="age1" type="number" class="validate" name="age1"required>
+            <label for="age1">Edad</label>
+          </div>
+          <div class="input-field col s6">
+              <input id="age2" type="number" class="validate" name="age2"required>
+              <label for="age2">Edad</label>
+            </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <p>
+              <label>
+                <input name="sex1" type="radio" value="h" checked />
+                <span>Hombre</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="sex1" type="radio" value="m" />
+                <span>Mujer</span>
+              </label>
+            </p>
+          </div>
+          <div class="input-field col s6">
+            <p>
+              <label>
+                <input name="sex2" type="radio" value="h" checked />
+                <span>Hombre</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="sex2" type="radio" value="m" />
+                <span>Mujer</span>
+              </label>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="time1" type="number" class="validate" name="time1" required>
+            <label for="time1">Tiempo Fumando</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="time2" type="number" class="validate" name="time2" required>
+            <label for="time2">Tiempo Fumando</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="week1" type="number" class="validate" name="week1" required>
+            <label for="week1">Cigarrillos Semanales</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="week2" type="number" class="validate" name="week2" required>
+            <label for="week2">Cigarrillos Semanales</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 center">
+            <input type="submit" class="btn btn-primary center-align red" value="Enviar">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
