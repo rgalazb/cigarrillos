@@ -10,7 +10,11 @@
    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  
+  <div class="row">
+    <div class="col s2">
+      <a class="btn btn-primary red" href="index.html">Volver</a>
+    </div>
+  </div>
   <video autoplay muted loop id="myVideo">
     <source src="./img/video.mp4" type="video/mp4">
     Hubo un problema con el video
@@ -19,121 +23,129 @@
     Resultados
   </h1>
   <div class="container">
-    <div class="row">
-      <div class="col s5 z-depth-5 white">
-        <div class="row">
-          <div class="col s12">
-            <p class="center"><i class="large material-icons">attach_money</i></p> 
-            <h5 class="header center red-text">
-              Mira cuento dinero has perdido
-            </h5>
+    <div class="centro">
+      <div class="row">
+        <div class="col s5 z-depth-5 white fixedhw">
+          <div class="row">
+            <div class="col s12">
+              <p class="center"><i class="large material-icons tooltipped" data-position="top" data-tooltip="¡Mira cuánto dinero has gastado en cigarrillos durante toda tu vida!">attach_money</i></p> 
+              <h5 class="header center red-text">
+                Dinero gastado
+              </h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s4 center">
+              <p id="menos-dinero-nombre"></p>
+              <img src="./img/poca plata.svg" alt="">
+              <p id="menos-dinero-monto"></p>
+            </div>
+            <div class="col s4 center">
+              <p id="mas-dinero-nombre"></p>
+              <img src="./img/mucha plata.svg" alt="">
+              <p id="mas-dinero-monto"></p>
+            </div>
+            <div class="col s4 center">
+              <p>promedio</p>
+              <img src="./img/media plata.svg" alt="">
+              <p id="monto-promedio"></p>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col s4">
-            <img src="./img/poca plata.svg" alt="">
-            <p id="menos-dinero-nombre"></p>
-            <p id="menos-dinero-monto"></p>
+        <div class="col s1"></div>
+        <div class="col s5 z-depth-5 white fixedhw">
+          <div class="row">
+            <div class="col s12">
+              <p class="center"><i class="large material-icons tooltipped" data-position="top" data-tooltip="Por si no sabías, una sola colilla de cigarro puede llegar a contaminar 50 litros de agua!">format_color_reset</i></p> 
+              <h5 class="header center red-text">
+                Agua contaminada
+              </h5>
+            </div>
           </div>
-          <div class="col s4">
-            <img src="./img/mucha plata.svg" alt="">
-            <p id="mas-dinero-nombre"></p>
-            <p id="mas-dinero-monto"></p>
-          </div>
-          <div class="col s4">
-            <img src="./img/media plata.svg" alt="">
-            <p>promedio</p>
-            <p id="monto-promedio"></p>
-          </div>
-        </div>
-      </div>
-      <div class="col s1"></div>
-      <div class="col s5 z-depth-5 white">
-        <div class="row">
-          <div class="col s12">
-            <p class="center"><i class="large material-icons">format_color_reset</i></p> 
-            <h5 class="header center red-text">
-              Agua
-            </h5>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s4">
-            <img src="./img/poco contaminado1.svg" alt="">
-            <p id="menos-agua-nombre"></p>
-            <p id="menos-agua-lts"></p>
-          </div>
-          <div class="col s4">
-            <img src="./img/muy contaminado1.svg" alt="">
-            <p id="mas-agua-nombre"></p>
-            <p id="mas-agua-lts"></p>
-          </div>
-          <div class="col s4">
-            <img src="./img/medio contaminado1.svg" alt="">
-            <p>Promedio</p>
-            <p id="promedio-lts"></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col s5 z-depth-5 white">
-        <div class="row">
-          <div class="col s12">
-            <p class="center"><i class="large material-icons">favorite_border</i></p> 
-            <h5 class="header center red-text">
-              Daño Al corazon
-            </h5>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s4">
-            <img src="./img/corazon mal.svg" alt="">
-          </div>
-          <div class="col s4">
-            <img src="./img/corazon no tan mal.svg" alt="">
-          </div>
-          <div class="col s4">
-            <img src="./img/corazon no mal.svg" alt="">
+          <div class="row">
+            <div class="col s4 center">
+              <p id="menos-agua-nombre"></p>
+              <img src="./img/agua poca 4.svg" alt="">
+              <p id="menos-agua-lts"></p>
+            </div>
+            <div class="col s4 center">
+              <p id="mas-agua-nombre"></p>
+              <img src="./img/agua harta 4.svg" alt="">
+              <p id="mas-agua-lts"></p>
+            </div>
+            <div class="col s4 center">
+              <p>Promedio</p>
+              <img src="./img/agua media 4.svg" alt="">  
+              <p id="promedio-lts"></p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col s1"></div>
-      <div class="col s5 z-depth-5 white">
-        <div class="row">
-          <div class="col s12">
-            <p class="center"><i class="large material-icons">today</i></p> 
-            <h5 class="header center red-text">
-              Días menos
-            </h5>
+      <div class="row">
+        <div class="col s5 z-depth-5 white">
+          <div class="row">
+            <div class="col s12">
+              <p class="center"><i class="large material-icons tooltipped" data-position="top" data-tooltip="Considerando los años que llevas fumando y los cigarrillos que fumas en una semana <br> se pueden estimar las probabilidades de que sufras un infarto en los próximos 10 años">favorite_border</i></p> 
+              <h5 class="header center red-text">
+                Riesgo de infarto
+              </h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s4 center">
+              <p id="menos-riesgo-nombre"></p>
+              <img src="./img/corazon mal.svg" alt="">
+              <p id="menos-riesgo-porcent"></p>
+            </div>
+            <div class="col s4 center">
+              <p id="mas-riesgo-nombre"></p>
+              <img src="./img/corazon no tan mal.svg" alt="">
+              <p id="mas-riesgo-porcent"></p>
+            </div>
+            <div class="col s4 center">
+              <p>Promedio</p>
+              <img src="./img/corazon no mal.svg" alt="">
+              <p id="prom-riesgo"></p>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col s4">
-            <img src="./img/poco tiempo1.svg" alt="">
-            <p id="menos-dias-nombre"></p>
-            <p id="menos-dias-cantidad"></p>
+        <div class="col s1"></div>
+        <div class="col s5 z-depth-5 white">
+          <div class="row">
+            <div class="col s12">
+              <p class="center"><i class="large material-icons tooltipped" data-position="top" data-tooltip="Cada cigarrillo que tú fumas te quita 15 minutos de vida. Deja de fumar y tendrás una vida mucho más larga!">today</i></p> 
+              <h5 class="header center red-text">
+                Días de vida perdidos
+              </h5>
+            </div>
           </div>
-          <div class="col s4">
-            <img src="./img/harto tiempo.svg" alt="">
-            <p id="mas-dias-nombre"></p>
-            <p id="mas-dias-cantidad"></p>
-          </div>
-          <div class="col s4">
-            <img src="./img/medio tiempo.svg" alt="">
-            <p>Promedio</p>
-            <p id="promedio-dias"></p>
+          <div class="row">
+            <div class="col s4 center">
+              <p id="menos-dias-nombre"></p>
+              <img src="./img/tiempo poco.svg" alt="">
+              <p id="menos-dias-cantidad"></p>
+            </div>
+            <div class="col s4 center">
+              <p id="mas-dias-nombre"></p>
+              <img src="./img/tiempo harto.svg" alt="">
+              <p id="mas-dias-cantidad"></p>
+            </div>
+            <div class="col s4 center">
+              <p>Promedio</p>
+              <img src="./img/tiempo medio.svg" alt="">
+              <p id="promedio-dias"></p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
   <script
   src="http://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
   <script src="./js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   
 </body>
 </html>

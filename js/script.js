@@ -9,10 +9,12 @@ function getData() {
   return inputs;
 }
 data = getData()
-
-var lostMoney1 = ((data.time1 * data.week1 * 52) / 20) * 3000 
-var lostMoney2 = ((data.time2 * data.week2 * 52) / 20) * 3000 
-var avgMoney = ((data.time1 * 42 * 52) / 20) * 3000
+$(document).ready(function(){
+  $('.tooltipped').tooltip();
+});
+var lostMoney1 = Math.round(((data.time1 * data.week1 * 52) / 20) * 3000) 
+var lostMoney2 = Math.round(((data.time2 * data.week2 * 52) / 20) * 3000) 
+var avgMoney = Math.round(((data.time1 * 42 * 52) / 20) * 3000)
 $('#monto-promedio').text("$" + avgMoney)
 if (lostMoney1 > lostMoney2) {
   $('#mas-dinero-nombre').text(data.name1)
@@ -28,16 +30,16 @@ if (lostMoney1 > lostMoney2) {
   $('#menos-dinero-monto').text("$" + lostMoney1)
 }
 
-var lostWater1 = (data.time1 * data.week1 * 52) * 50
-var lostWater2 = (data.time2 * data.week2 * 52) * 50
+var lostWater1 = Math.round((data.time1 * data.week1 * 52) * 50)
+var lostWater2 = Math.round((data.time2 * data.week2 * 52) * 50)
 var avgWater = (data.time1 * 42 * 52) * 50
 $('#promedio-lts').text(avgWater + "lts")
 if (lostMoney1 > lostMoney2) {
   $('#mas-agua-nombre').text(data.name1)
   $('#mas-agua-lts').text(lostWater1 + "lts")
 
-  $('#menos-agua-nombre').text(data.name1)
-  $('#menos-agua-lts').text(lostWater1 + "lts")
+  $('#menos-agua-nombre').text(data.name2)
+  $('#menos-agua-lts').text(lostWater2 + "lts")
 } else {
   $('#mas-agua-nombre').text(data.name2)
   $('#mas-agua-lts').text(lostWater2 + "lts")
@@ -65,66 +67,22 @@ if (lostDays1 > lostDays2) {
   $('#menos-dias-cantidad').text(Math.round(lostDays1))
 }
 
+var risk1 = Math.round(data.sex1 === 'h' ? (data.age1 / 3 + data.week1 / 21) : (data.age1 / 2 + data.week1 / 21))
+var risk2 = Math.round(data.sex2 === 'h' ? (data.age2 / 3 + data.week2 / 21) : (data.age2 / 2 + data.week2 / 21))
+var avgRisk = Math.round(data.sex1 === 'h' ? (data.age1/3 + 42 / 21) : data.age1 / 2 + 42 / 21)
+$('#prom-riesgo').text(avgRisk + "%")
 
-// Sexo = input('sexo (M/H): ')
-// Edad = int(input('edad: '))
-// Altura = float(input('altura: '))# Metros con puntos, no comas
-// Peso = int(input('peso: ')) #Kg
-// Cigarros = int(input('cigarros fumados diariamente: '))#cigarros diarios
-// DH = Edad*0.51 #Daño por edad hombre
-// DM = Edad*0.3 #Daño por edad mujer
 
-// if Sexo =='H':
-//     Cuenta = 20
-    
-//     if Cigarros<15:
-//         Cuenta+=2
-//     elif Cigarros<24:
-//         Cuenta+=4
-//     elif Cigarros>24:
-//         Cuenta+=6
-//     Cuenta += int(DH)
-    
-//     r=''
-//     if Cuenta<35:
-//         r='1%'
-//     elif Cuenta<45:
-//         r='1-3%'
-//     elif Cuenta<55:
-//         r='3-7%'
-//     elif Cuenta<65:
-//         r='7-17%'
-//     elif Cuenta<70:
-//         r='17-28%'
-//     elif Cuenta<75:
-//         r='28-40%'
-//     elif Cuenta<80:
-//         r='40-56%'
-//     print(r)
-    
-// if Sexo == 'M':
-//     Cuenta = 27
-//     if Cigarros<15:
-//         Cuenta+=8
-//     elif Cigarros<24:
-//         Cuenta+=15
-//     elif Cigarros>24:
-//         Cuenta+=18
-//     Cuenta += int(DM)
-    
-//     r=''
-//     if Cuenta<60:
-//         r='1%'
-//     elif Cuenta<70:
-//         r='1-3%'
-//     elif Cuenta<80:
-//         r='3-5%'
-//     elif Cuenta<85:
-//         r='6-11%'
-//     elif Cuenta<90:
-//         r='11-19%'
-//     elif Cuenta<95:
-//         r='19-28%'
-//     elif Cuenta<100:
-//         r='28-43%'
-//     print(r)
+if (risk1 > risk2) {
+  $('#menos-riesgo-nombre').text(data.name1)
+  $('#menos-riesgo-porcent').text(risk1 + "%")
+
+  $('#mas-riesgo-nombre').text(data.name2)
+  $('#mas-riesgo-porcent').text(risk2 + "%")
+} else {
+  $('#menos-riesgo-nombre').text(data.name2)
+  $('#menos-riesgo-porcent').text(risk2 + "%")
+
+  $('#mas-riesgo-nombre').text(data.name1)
+  $('#mas-riesgo-porcent').text(risk1 + "%")
+}

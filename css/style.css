@@ -6,3 +6,25 @@
   min-width: 100%; 
   min-height: 100%;
 }
+
+a.btn.btn-primary {
+  margin-top: 5px;
+}
+
+.centro {
+  padding-left: 15%;
+}
+#box {
+  width: 60%;
+}
+.row .col.s5 {
+  height: 430px;
+}
+.row .col.s1 {
+  width: 0%;
+}
+/* acá puede elegir tipo grafia  */
+body {
+  /*font-family: 'Courier New', Courier, monospace;*/
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
